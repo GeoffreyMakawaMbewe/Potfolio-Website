@@ -1,0 +1,127 @@
+# Geoffrey Makawa
+**Full Stack Software Developer**
+
+📧 geoffreymakawa04@gmail.com | 📱 +265 881 337 853 | 📱 +265 992 877 820  
+🔗 LinkedIn: https://www.linkedin.com/in/geoffrey-makawa-14100b2a4/
+💻 GitHub: https://github.com/GeoffreyMakawaMbewe
+🌐 Portfolio: your-portfolio-url.com
+
+================================================================================
+
+PROFESSIONAL SUMMARY
+
+Determined and passionate Full Stack Developer currently in my fourth year of 
+Education Computer Science at the University of Malawi (UNIMA). Graduate of 
+Mulunguzi Secondary School in Zomba, where I developed strong leadership skills 
+as a Tuckshop Prefect. Specialized in building scalable web and mobile 
+applications using the Spring Cloud Ecosystem, modern frontend technologies, 
+and Android development with Jetpack Compose. Strong foundation in software 
+architecture, microservices, cloud deployment, and proven leadership abilities.
+
+================================================================================
+
+TECHNICAL SKILLS
+
+Backend Development
+• Java, Spring Boot, Spring Cloud Ecosystem, Microservices Architecture
+• RESTful APIs, Authentication & Authorization, Database Design
+
+Frontend Development
+• React.js, Vite, TypeScript, JavaScript (ES6+)
+• HTML5, CSS3, Responsive Design, Material Design
+
+Mobile Development
+• Kotlin, Jetpack Compose, Android SDK, Material Design 3
+• MVVM Architecture, Media3, Local Storage
+
+Cloud & DevOps
+• AWS (EC2, S3, Lambda), Cloud Deployment
+• Git, GitHub, CI/CD Principles
+
+Databases
+• SQL, PostgreSQL, MySQL, Firebase
+
+Tools & Technologies
+• IntelliJ IDEA, Android Studio, VS Code
+• Postman, npm, Gradle, Maven
+
+================================================================================
+
+EDUCATION
+
+Bachelor of Education in Computer Science
+University of Malawi (UNIMA) | Expected Graduation: 2026
+• Fourth Year Student
+• Focus: Software Engineering, Full Stack Development, Educational Technology
+
+Malawi School Certificate of Education (MSCE)
+Mulunguzi Secondary School, Zomba | Graduated: 2022
+• Tuckshop Prefect - Managed school tuckshop operations and student services
+• Demonstrated leadership, financial management, and organizational skills
+
+================================================================================
+
+FEATURED PROJECTS
+
+Melodify - Android Music Player
+Technologies: Kotlin, Jetpack Compose, Material Design 3, MVVM, Media3
+
+• Developed modern Android music player with Material You dynamic theming
+• Implemented local media playback, playlist management, and audio visualization
+• Applied MVVM architecture for clean code separation and maintainability
+• Utilized Jetpack Compose for declarative UI with smooth animations
+• Impact: Demonstrated proficiency in modern Android development practices
+
+Portfolio Website
+Technologies: React, Vite, Vanilla CSS, EmailJS
+
+• Built fully responsive portfolio website with dark/light theme toggle
+• Implemented smooth scroll animations, neon-styled UI components
+• Integrated email contact form with EmailJS for direct communication
+• Optimized for performance and accessibility across all devices
+• Impact: 100% responsive design, <2s load time
+
+Exponent Tech Platform
+Technologies: Java, Spring Boot, React, AWS, Microservices
+
+• Architected enterprise-level full-stack solution with microservices
+• Deployed scalable cloud infrastructure on AWS
+• Implemented modern frontend with React for optimal user experience
+• Impact: Improved system performance by 40%
+
+================================================================================
+
+KEY ACHIEVEMENTS
+
+• Leadership Experience: Served as Tuckshop Prefect, managing operations and 
+  demonstrating responsibility
+• Modern Android Development: Built production-ready music player using latest 
+  Android technologies
+• Full Stack Expertise: Successfully delivered end-to-end web applications from 
+  design to deployment
+• Cloud Architecture: Deployed and managed scalable applications on AWS 
+  infrastructure
+• UI/UX Excellence: Created visually stunning interfaces with focus on user 
+  experience
+• Continuous Learning: Actively exploring Spring Cloud Ecosystem and 
+  cutting-edge technologies
+
+================================================================================
+
+ADDITIONAL INFORMATION
+
+Languages: English (Fluent), Chichewa (Native)
+Interests: Software Architecture, Mobile Development, Cloud Computing, Open Source
+Availability: Open to freelance projects and full-time opportunities
+
+================================================================================
+
+CONTACT
+
+I'm currently available for freelance work and full-time opportunities. If you 
+have a project that needs some creative touch or are looking for a passionate 
+developer to join your team, I'd love to hear from you!
+
+Email: geoffreymakawa04@gmail.com
+Phone: +265 881 337 853 / +265 992 877 820
+WhatsApp: +265 881 337 853
