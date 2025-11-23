@@ -161,6 +161,18 @@
 
   .hero-subtitle {
     font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Disable typing animation on small screens to prevent overflow */
+  .animate-typing {
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+    width: auto;
+    animation: none;
+    display: block;
+    margin-bottom: 1rem;
   }
 }
 
@@ -182,6 +194,7 @@
     blink-caret .75s step-end infinite;
   display: inline-block;
   width: 0;
+  max-width: 100%; /* Ensure it doesn't overflow container */
 }
 
 @keyframes fadeInUp {
