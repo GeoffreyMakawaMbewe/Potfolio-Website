@@ -19,7 +19,7 @@ const testimonialsData = [
     id: 2,
     name: "Ms Faith Chizule",
     role: "Law Enforcement Expert from University of Malawi",
-    image: "/testimonial-placeholder.jpg",
+    image: "/Ms Faith Chizule.jpg",
     quote: "Working with Geoffrey has been a pleasure. His ability to tackle complex problems and deliver scalable solutions demonstrates maturity beyond his years.",
     rating: 4
   },
@@ -58,7 +58,11 @@ const Testimonials = () => {
                 <p className="testimonial-quote">{testimonial.quote}</p>
                 <div className="testimonial-author">
                   <div className="author-image">
-                    <div className="author-placeholder">{testimonial.name.charAt(0)}</div>
+                    {testimonial.image && testimonial.image !== '/testimonial-placeholder.jpg' ? (
+                      <img src={testimonial.image} alt={testimonial.name} className="author-photo" />
+                    ) : (
+                      <div className="author-placeholder">{testimonial.name.charAt(0)}</div>
+                    )}
                   </div>
                   <div className="author-info">
                     <h4 className="author-name">{testimonial.name}</h4>
