@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import Modal from './Modal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -45,10 +46,22 @@ const categories = ["All", "Android", "Full‑Stack", "Web"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
   const filteredProjects = selectedCategory === "All"
     ? projectsData
     : projectsData.filter(p => p.category === selectedCategory);
+
+  const handleOpenModal = (project) => {
+    setCurrentProject(project);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setCurrentProject(null);
+  };
 
   return (
     <section id="projects" className="section projects">
@@ -86,7 +99,7 @@ const Projects = () => {
                   <div className="project-image-overlay">
                     <div className="project-links-overlay">
                       {project.demoLink !== "#" && (
-                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="overlay-link">Live Demo</a>
+                        <button onClick={() => handleOpenModal(project)} className="overlay-link">Live Demo</button>
                       )}
                       {project.githubLink !== "#" && (
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="overlay-link">View Code</a>
@@ -109,7 +122,7 @@ const Projects = () => {
                   </div>
                   <div className="project-actions">
                     {project.demoLink !== "#" && (
-                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="btn-project btn-demo">Live Demo →</a>
+                      <button onClick={() => handleOpenModal(project)} className="btn-project btn-demo">Live Demo →</button>
                     )}
                     {project.githubLink !== "#" && (
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn-project btn-code">View Code</a>
@@ -121,6 +134,32 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
+
+      {/* Live Demo Modal */}
+      <Modal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        title={currentProject?.title || "Live Demo"}
+        content={
+          <div className="demo-content">
+            {currentProject?.demoLink && currentProject.demoLink.endsWith('.apk') ? (
+              <div className="apk-download-container">
+                <p>This is an Android application. You can download the APK below:</p>
+                <a href={currentProject.demoLink} className="btn-project btn-demo" download>Download APK</a>
+              </div>
+            ) : (
+              <iframe
+                src={currentProject?.demoLink}
+                title="Live Demo"
+                className="demo-iframe"
+                width="100%"
+                height="500px"
+                style={{ border: 'none', borderRadius: '8px' }}
+              />
+            )}
+          </div>
+        }
+      />
     </section>
   );
 };

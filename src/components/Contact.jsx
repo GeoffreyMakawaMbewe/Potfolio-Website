@@ -1,14 +1,17 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import './Contact.css';
 
 const Contact = () => {
   const form = useRef();
-  const [status, setStatus] = useState('');
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setStatus('sending');
+    setIsSending(true);
+    const loadingToast = toast.loading('Sending message...');
+
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -16,14 +19,16 @@ const Contact = () => {
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then(() => {
-        setStatus('success');
+        toast.dismiss(loadingToast);
+        toast.success('Message sent successfully!');
         form.current.reset();
-        setTimeout(() => setStatus(''), 5000);
+        setIsSending(false);
       })
       .catch((error) => {
-        setStatus('error');
+        toast.dismiss(loadingToast);
+        toast.error('Failed to send message. Please try again.');
         console.error(error.text);
-        setTimeout(() => setStatus(''), 5000);
+        setIsSending(false);
       });
   };
 
@@ -53,11 +58,9 @@ const Contact = () => {
               <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
               <label htmlFor="message">Message</label>
             </div>
-            <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            <button type="submit" className="btn btn-primary" disabled={isSending}>
+              {isSending ? 'Sending...' : 'Send Message'}
             </button>
-            {status === 'success' && <p className="success-msg">Message sent successfully!</p>}
-            {status === 'error' && <p className="error-msg">Failed to send message. Please try again.</p>}
           </form>
         </div>
       </div>

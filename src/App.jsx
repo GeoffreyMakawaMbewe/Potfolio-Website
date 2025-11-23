@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import ScrollToBottom from './components/ScrollToBottom';
 import ScrollToTop from './components/ScrollToTop';
 import Loader from './components/Loader';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
 
 function App() {
@@ -63,6 +64,15 @@ function App() {
 
   return (
     <div className="app">
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: '#333',
+            color: '#fff',
+          },
+        }}
+      />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />

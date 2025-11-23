@@ -53,7 +53,15 @@ const Hero = () => {
       <div className="hero-background">
         <div className="glow glow-1"></div>
         <div className="glow glow-2"></div>
+        <div className="hero-grid"></div>
       </div>
+
+      <a href="#about" className="scroll-down">
+        <span className="mouse">
+          <span className="wheel"></span>
+        </span>
+        <span className="arrow"></span>
+      </a>
     </section>
   );
 };
