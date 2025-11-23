@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { FaLinkedin, FaGithub, FaTwitter, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -46,6 +47,18 @@ const Contact = () => {
       });
   };
 
+  const socialLinks = [
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/geoffrey-makawa-14100b2a4/', icon: FaLinkedin },
+    { name: 'GitHub', url: 'https://github.com/GeoffreyMakawaMbewe', icon: FaGithub },
+    { name: 'Twitter', url: 'https://x.com/Geoffreymakawa3', icon: FaTwitter },
+    { name: 'Facebook', url: 'https://www.facebook.com/geoffrey.auspicious', icon: FaFacebook },
+  ];
+
+  const whatsappNumbers = [
+    { number: '+265881337853', label: 'Primary' },
+    { number: '+265992877820', label: 'Secondary' },
+  ];
+
   return (
     <section id="contact" className="section contact">
       <div className="container">
@@ -58,6 +71,43 @@ const Contact = () => {
             <a href="mailto:geoffreymakawa04@gmail.com" className="email-link">
               geoffreymakawa04@gmail.com
             </a>
+
+            {/* WhatsApp Quick Contact */}
+            <div className="whatsapp-section">
+              <h3>Quick Contact via WhatsApp</h3>
+              <div className="whatsapp-buttons">
+                {whatsappNumbers.map((wa, index) => (
+                  <a
+                    key={index}
+                    href={`https://wa.me/${wa.number.replace(/\+/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-whatsapp"
+                  >
+                    <FaWhatsapp /> {wa.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="social-links">
+              <h3>Connect With Me</h3>
+              <div className="social-icons">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon"
+                    aria-label={social.name}
+                  >
+                    <social.icon />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="form-group">
