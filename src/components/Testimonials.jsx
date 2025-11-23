@@ -1,10 +1,10 @@
 import React from 'react';
 import './Testimonials.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper';
 
 const testimonialsData = [
   {
