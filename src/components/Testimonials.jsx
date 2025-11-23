@@ -25,7 +25,7 @@ const testimonialsData = [
   },
   {
     id: 3,
-    name: "Mr Auspicious Makawa",
+    name: "Mr Auspicious Makawa- Computer Science Educationist",
     role: "Senior Developer, Exponent Tech",
     image: "/testimonial-placeholder.jpg",
     quote: "Geoffrey's full-stack expertise and enthusiasm for learning make him a valuable asset to any development team. His code quality is consistently excellent.",
