@@ -19,7 +19,7 @@ const testimonialsData = [
     id: 2,
     name: "Ms Faith Chizule",
     role: "Law Enforcement Expert from University of Malawi",
-    image: "/Ms%20Faith%20Chizule.jpg",
+    image: "/faith.jpg",
     quote: "Working with Geoffrey has been a pleasure. His ability to tackle complex problems and deliver scalable solutions demonstrates maturity beyond his years.",
     rating: 4
   },
