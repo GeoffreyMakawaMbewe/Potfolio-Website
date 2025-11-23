@@ -9,6 +9,19 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    // Debug: Check if env vars are loaded
+    console.log('Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
+    if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || 
+        !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 
+        !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+      toast.error('Configuration Error: Missing EmailJS keys. Please restart the dev server.');
+      return;
+    }
+
     setIsSending(true);
     const loadingToast = toast.loading('Sending message...');
 
@@ -18,16 +31,17 @@ const Contact = () => {
       form.current,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-      .then(() => {
+      .then((result) => {
+        console.log('SUCCESS!', result.text);
         toast.dismiss(loadingToast);
         toast.success('Message sent successfully!');
         form.current.reset();
         setIsSending(false);
       })
       .catch((error) => {
+        console.error('FAILED...', error);
         toast.dismiss(loadingToast);
-        toast.error('Failed to send message. Please try again.');
-        console.error(error.text);
+        toast.error(`Failed: ${error.text || 'Unknown error'}. Check console for details.`);
         setIsSending(false);
       });
   };
